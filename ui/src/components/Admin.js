@@ -58,7 +58,7 @@ navigate("/admin1")
           <Navbar.Brand href="#home"  >
             <img
               alt=""
-              src={require("./tomato.png")}
+              src={require("./tomato2.png")}
               width="40%"
               height="40%"
               className="d-inline-block align-top"

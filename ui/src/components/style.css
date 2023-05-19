@@ -145,8 +145,9 @@ footer p{
     text-align: center;
     text-decoration: none;
     /* margin-right: auto; */
-    margin-left: 10px;
-   
+    /* margin-left: 10px; */
+   height: 25px;
+   margin-top: 10px;
   }
   
   .fa:hover {

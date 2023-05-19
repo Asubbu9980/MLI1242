@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Container from 'react-bootstrap/esm/Container'
 function Footer() {
   return (
     <>
@@ -15,15 +15,16 @@ function Footer() {
                         <img class="" width="24" height="24" alt="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-twitter_gtq8dv" /></a></div></div>
     */}
 
-
-<footer class="bg-light p-2" style={{maxWidth:"2000px",height:"40px",backgroundColor:"aliceblue"}}>
-  <p class="text-center text-dark" style={{marginRight:"auto",textAlign:"center"}}><sup>&copy;</sup>2023 Tomato</p>
+<div className='container-fluid'>
+<footer class="bg-light " style={{height:"40px",backgroundColor:"aliceblue"}}>
+  <p class="text-center text-dark" style={{margin:"auto",textAlign:"center"}}><sup>&copy;</sup>2023 Tomato</p>
   <a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>
 <a href="#" class="fa fa-google"></a>
 <a href="#" class="fa fa-linkedin"></a>
 
 </footer>
+</div>
     </>
   )
 }

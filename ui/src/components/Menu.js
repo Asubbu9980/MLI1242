@@ -81,7 +81,7 @@ function Menu() {
 
           if (window.performance.getEntriesByType("navigation")){
             p=window.performance.getEntriesByType("navigation")[0].type;
-     
+     console.log(p)
             if (p=='navigate'){result=0;console.log(result)}
             if (p=='reload'){result=1;console.log(result)}
             if (p=='back_forward'){result=2;console.log(result)}
@@ -103,7 +103,7 @@ function Menu() {
               
               console.log(result)
             } else {
-              updatedLikes.push({ cardId, count: 1 });
+              updatedLikes.push({ cardId, count: 1});
             
               console.log(updatedLikes)
             }

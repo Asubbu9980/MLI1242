@@ -20,7 +20,7 @@ function Cards({food,id}) {
     return(
       <>
      
-            <Card style={{ width: '22rem', border:"none",marginBottom:"40px",backgroundColor:"#F0F8FF" }} onClick={()=>showCard(item)} >
+            <Card style={{ width: '22rem', border:"none",marginBottom:"40px",backgroundColor:"#F0F8FF" }} onClick={()=>showCard(item)} data-bs-toggle="tooltip" title="click to view menu" >
       <Card.Img variant="top" src={item.imgdata} className='cardimg' />
       <Card.Body>
         {/* <Card.Title>Card Title</Card.Title> */}
