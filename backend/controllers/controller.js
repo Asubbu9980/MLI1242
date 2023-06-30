@@ -2,6 +2,7 @@ const restmodel=require("../models/model")
 const usermodel=require("../models/model1")
 const cartmodel=require("../models/model3")
 const likesmodel=require("../models/model4")
+const ordersmodel=require("../models/model5")
 // const itemsmodel=require("../models/model2/menuModel")
 // const maincoursemodel=require("../models/model2/menuModel1")
 // const dessertsmodel=require("../models/model2/menuModel2")
@@ -739,5 +740,26 @@ const getlikes=async (req,res,next)=>{
     }
 }
 
+const orders=async(req,res,next)=>{
+    try{
+        console.log(req.body);
+        await ordersmodel.create({...req.body}).then(res=>{console.log(res)})
+        res.json({msg:"order added"})
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
+const getOrders=async (req,res,next)=>{
+    try{
+const orderdetails=await ordersmodel.find({email:req.body.email}).sort({timestamp:'asc'}).exec()
+res.send(orderdetails)
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
 module.exports={getlist,postuser,loginuser,refresh,logout,items,protected,postrest,postmenu,maincourse,desserts,beverages,maincourse1,desserts1,beverages1,additems,getitems,starterlikes,maincourselikes,dessertlikes,beverageslikes,postlikes,getlikes,removelikes,updateitems
-    ,updateitems1}
+    ,updateitems1,orders,getOrders}

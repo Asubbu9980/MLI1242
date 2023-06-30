@@ -193,3 +193,32 @@ footer p{
   .fa-drumstick{
     color: green;
   }
+
+  .duration{
+    margin-top: 20px;
+    margin-left: 20px;
+    color: red;
+    font-weight: bold;
+  }
+
+  .status{
+    color: green;
+  }
+
+  .noitems{
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+
+  .prev{
+    color: red;
+    margin: 40px;
+  }
+
+  .even {
+    background-color: #e9dc75;
+  }
+  
+  .odd {
+    background-color: #94f6fb;
+  }

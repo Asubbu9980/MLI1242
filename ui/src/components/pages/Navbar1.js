@@ -110,8 +110,8 @@ if(props.show==false){
             <Nav.Link href="/cart1">
             
            {count&&show1==true? <Badge badgeContent={count} color="error">
-              <i className="fa fa-shopping-cart" aria-hidden="true" style={{color:"red",fontSize:"20px",marginLeft:"2%"}}></i>
-              </Badge>:show1==true?<i className="fa fa-shopping-cart" aria-hidden="true" style={{color:"red",fontSize:"20px",marginLeft:"2%"}}></i>:null} 
+              <i className="fa fa-shopping-cart" aria-hidden="true" style={{color:"red",fontSize:"25px",marginLeft:"2%",marginTop:"2px"}}></i>
+              </Badge>:show1==true?<i className="fa fa-shopping-cart" aria-hidden="true" style={{color:"red",fontSize:"25px",marginLeft:"2%",marginTop:"2px"}}></i>:null} 
            
            
            
@@ -119,8 +119,18 @@ if(props.show==false){
             {/* {auth&&<Nav.Link href="/admin">admin</Nav.Link>} */}
            {!localStorage.getItem("token")&&<Nav.Link href="/login" style={{color:"red",fontWeight:"bold",marginLeft:"2%",fontSize:"20px"}}>Login</Nav.Link>}
             {!localStorage.getItem("token")&&<Nav.Link href="/signup" style={{color:"red",fontWeight:"bold",marginLeft:"2%",fontSize:"20px"}}>signup</Nav.Link>}
-            {localStorage.getItem("token")&&<Nav.Link href="/" onClick={handlelogout} style={{color:"red",fontWeight:"bold",marginLeft:"2%",fontSize:"20px"}}>Logout</Nav.Link>}
-      
+            {/* {localStorage.getItem("token")&&<Nav.Link href="/" onClick={handlelogout} style={{color:"red",fontWeight:"bold",marginLeft:"2%",fontSize:"20px"}}>Logout</Nav.Link>} */}
+            
+          
+            {localStorage.getItem("token")&&  <NavDropdown title="MyAccount" id="basic-nav-dropdown">
+            <NavDropdown.Item style={{color:"red",fontWeight:"bold"}}>Profile</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="/MyOrders" style={{color:"red",fontWeight:"bold"}}>Orders</NavDropdown.Item>
+            <NavDropdown.Divider />
+           <NavDropdown.Item href="/" onClick={handlelogout} style={{color:"red",fontWeight:"bold"}}>Logout</NavDropdown.Item>
+
+          </NavDropdown>}
+          
           </Nav>
           <Nav>
            

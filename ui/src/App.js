@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/pages/Home';
 import Menu from './components/pages/Menu';
 import Admin from './components/pages/Admin';
@@ -8,6 +9,11 @@ import Cart from './components/pages/Cart';
 import Cart1 from './components/pages/Cart1';
 import Login from "./components/pages/Login";
 import SignUp from './components/pages/SignUp';
+import Track from './components/pages/Track';
+import MyOrders from './components/pages/MyOrders';
+
+
+
 import { useState } from 'react';
 
 
@@ -52,7 +58,8 @@ await fetch("http://localhost:8000/rest/refresh",{
         <Route path='/cart1' element={<Cart1 />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
-
+        <Route path='/track' element={<Track />} />
+        <Route path='/MyOrders' element={<MyOrders />} />
       </Routes>
     </Router>
     </userContext.Provider>
@@ -62,3 +69,5 @@ await fetch("http://localhost:8000/rest/refresh",{
 }
 
 export default App;
+
+

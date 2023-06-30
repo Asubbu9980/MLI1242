@@ -9,6 +9,7 @@ router.get("/maincourse",cont.maincourse)
 router.get("/desserts",cont.desserts)
 router.get("/beverages",cont.beverages)
 router.get("/getitems/:email",cont.getitems)
+
 router.post("/sign",cont.postuser)
 router.post("/login",cont.loginuser)
 router.post("/refresh",cont.refresh)
@@ -29,6 +30,8 @@ router.post("/getlikes",cont.getlikes)
 router.post("/removelikes",cont.removelikes)
 router.post("/updateitems",cont.updateitems)
 router.post("/updateitems1",cont.updateitems1)
+router.post("/orders",cont.orders)
+router.post("/getOrders",cont.getOrders)
 module.exports=router;
 
 
