@@ -1,15 +1,13 @@
-var mongoose=require("mongoose");
-var {Schema}=mongoose;
+var mongoose=require("mongoose")
+const {Schema}=mongoose;
 
-var menuSchema2=new Schema({
-    name:String,
-    imgsrc:String,
-    rating:String,
-    cost:Number,
-    symbol:String,
-    desc:String
+const likesSchema=new Schema({
+   
+     item:Array, //itemid,liked,disliked
+    
+    email:String
 })
 
-var menuModel2=mongoose.model("desserts",menuSchema2)
+const likesmodel=mongoose.model("likes",likesSchema)
 
-module.exports=menuModel2;
+module.exports=likesmodel;

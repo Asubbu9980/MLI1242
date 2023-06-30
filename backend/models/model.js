@@ -1,3 +1,4 @@
+const { number } = require("joi");
 var mongoose=require("mongoose")
 var {Schema}=mongoose;
 
@@ -7,9 +8,10 @@ const restschema=new Schema({
     address:String,
     delimg:String,
     somedata:String,
-    somedata:String,
+    price:String,
     rating:String,
-    arrimg:String
+    arrimg:String,
+   
 })
 
 const rest=mongoose.model("restaurants",restschema)

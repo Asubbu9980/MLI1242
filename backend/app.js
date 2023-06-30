@@ -23,7 +23,8 @@ app.set('view engine', 'jade');
 
 app.use(cors({
   origin:"http://localhost:8001",
-  credentials:true
+  credentials:true,
+  
   
 }))
 app.use(logger('dev'));

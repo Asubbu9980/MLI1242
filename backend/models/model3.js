@@ -1,15 +1,19 @@
-var mongoose=require("mongoose");
-var {Schema}=mongoose;
+var mongoose=require("mongoose")
+const {Schema}=mongoose;
 
-var menuSchema1=new Schema({
-    name:String,
-    imgsrc:String,
-    rating:String,
-    cost:Number,
-    symbol:String,
-    desc:String
+const cartchema=new Schema({
+    // val:Number,
+    // name:String,
+    // symbol:String,
+    // count:Number,
+     items:Array,
+    // items:{
+	// 		'type': {type: String},
+	// 		'value': [String]
+	// 	},
+    email:String
 })
 
-var menuModel1=mongoose.model("maincourses",menuSchema1)
+const cartmodel=mongoose.model("cartitems",cartchema)
 
-module.exports=menuModel1;
+module.exports=cartmodel;

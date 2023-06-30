@@ -1,12 +1,12 @@
 const {sign}=require("jsonwebtoken")
 
 const createAccessToken=(firstname)=>{
-return sign({firstname},process.env.ACCESS_TOKEN_SECRET,{expiresIn:"15m"})
+return sign({firstname},process.env.ACCESS_TOKEN_SECRET,{expiresIn:"5m"})
 
 }
 
 const createRefreshToken=(firstname)=>{
-return sign({firstname},process.env.REFRESH_TOKEN_SECRET,{expiresIn:"7d"})
+return sign({firstname},process.env.REFRESH_TOKEN_SECRET,{expiresIn:"10m"})
 
 }
 
